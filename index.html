@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPL Tracker</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav class="tab-nav">
+        <button data-tab="today" class="tab active">Today</button>
+        <button data-tab="program" class="tab">Program</button>
+        <button data-tab="checkin" class="tab">Check-in</button>
+        <button data-tab="logger" class="tab">Logger</button>
+        <button data-tab="history" class="tab">History</button>
+        <button data-tab="export" class="tab">Export</button>
+    </nav>
+
+    <main>
+        <!-- Today Tab -->
+        <section id="today" class="tab-content active">
+            <h1>Today's Goal</h1>
+            <div id="today-goal"></div>
+            <div id="last-session"></div>
+            <button id="start-workout">Start Next Workout</button>
+        </section>
+
+        <!-- Program Tab -->
+        <section id="program" class="tab-content">
+            <h2>Program Settings</h2>
+            <label>Goal: <input id="goal" type="text" value="Strength"></label>
+            <label>Split: <select id="split"><option>PPL</option></select></label>
+            <label>Duration: <input id="duration" type="number" value="6"> weeks</label>
+            <button id="save-program">Save</button>
+            <div id="current-program"></div>
+        </section>
+
+        <!-- Check-in Tab -->
+        <section id="checkin" class="tab-content">
+            <h2>Daily Check-in</h2>
+            <label>Pain (1-10): <input id="pain" type="range" min="1" max="10" value="3"></label>
+            <label>Fatigue (1-10): <input id="fatigue" type="range" min="1" max="10" value="4"></label>
+            <label>Time Available: <input id="time" type="number" value="60"> min</label>
+            <label>Equipment: <select id="equipment"><option>Full Gym</option><option>Home</option></select></label>
+            <button id="submit-checkin">Submit</button>
+        </section>
+
+        <!-- Logger Tab -->
+        <section id="logger" class="tab-content">
+            <h2>Quick Logger</h2>
+            <div id="current-sets"></div>
+            <div class="input-row">
+                <input id="log-weight" type="number" placeholder="Weight">
+                <input id="log-reps" type="number" placeholder="Reps">
+                <select id="log-rpe"><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+                <button id="log-set">Log Set</button>
+            </div>
+        </section>
+
+        <!-- History Tab -->
+        <section id="history" class="tab-content">
+            <h2>Workout History</h2>
+            <div id="history-list"></div>
+        </section>
+
+        <!-- Export Tab -->
+        <section id="export" class="tab-content">
+            <h2>Export Data</h2>
+            <button id="export-csv">Download CSV</button>
+        </section>
+    </main>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
