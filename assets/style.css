@@ -15,3 +15,5 @@ button:hover { background: #0056cc; }
 #current-sets, #history-list { margin-top: 20px; }
 .set-item { background: white; padding: 12px; border-radius: 8px; margin-bottom: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 @media (max-width: 480px) { .input-row { flex-direction: column; } }
+.tab, button { touch-action: manipulation; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+
